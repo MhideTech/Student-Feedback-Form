@@ -33,9 +33,9 @@ function Department() {
 	}, [name, email, navigate, dispatch]);
 
 	return (
-		<div className="page">
-			<header className="header">Welcome {name}!</header>
-			<div className="app">
+		<div className={styles.page}>
+			<header className={styles.header}>Welcome {name}!</header>
+			<div className={styles.app}>
 				<form action="">
 					<input
 						type="text"

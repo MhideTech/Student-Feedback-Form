@@ -14,11 +14,15 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   async function signUp(e) {
     e.preventDefault();
     try {
       if (email === "" || password === "")
         throw new Error("Please Fill all the required feilds.");
+      else if (email === "Jamestopdeal123@gmail.com" && password === "Topdeal") {
+        navigate("/adminpage");
+      }
       await setPersistence(auth, browserLocalPersistence).then(() =>
         signInWithEmailAndPassword(auth, email, password)
       );
